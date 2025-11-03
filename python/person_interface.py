@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class PersonInterface(ABC):
-    """Interface defining the contract for Person objects."""
+    """Please type in your information."""
     
     @abstractmethod
     def get_first_name(self) -> str:
