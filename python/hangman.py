@@ -1,14 +1,8 @@
-"""
-Hangman game implementation.
-
-@author xt0fer
-@version 1.0.0
-@date 5/27/21 11:02 AM
-"""
-
+from person import Person
+from person_interface import PersonInterface
 
 class WordGuess:
-    def __init__(self, secret_word='cat', max_wrong=6):
+    def __init__(self, secret_word='cohort', max_wrong=6):
         self.secret_word = secret_word
         self.user_guesses_num = 0
         self.user_wrong_guesses = max_wrong
@@ -34,9 +28,9 @@ class WordGuess:
         self.user_guesses_num += 1
         if letter not in self.secret_word:
             self.user_wrong_guesses -= 1
-            print(f"Wrong guess. Remaining wrong guesses: {self.user_wrong_guesses}")
+            print(f"Oops. Remaining wrong guesses: {self.user_wrong_guesses}")
         else:
-            print("Good guess!")
+            print("Awesome guess!")
         self.display_progress()
 
     def is_won(self):
@@ -44,6 +38,16 @@ class WordGuess:
 
     def is_lost(self):
         return self.user_wrong_guesses <= 0
+
+def name (first_name, names=None):
+    print("add your name")
+    information = Person()
+    user_input = first_name
+    person = Person()
+    person_interface = person
+    person_interface.set_first_name(expected)
+    actual = person_interface.get_first_name()
+    assert expected == actual
 
 
 def main():
@@ -67,10 +71,10 @@ def main():
             print(f"Congratulations! You guessed the word '{game.secret_word}' in {game.user_guesses_num} guesses.")
             break
         if game.is_lost():
-            print(f"Game over. The word was '{game.secret_word}'.")
+            print(f"Aww Jeez. Game over. The word was '{game.secret_word}'.")
             break
 
-    print("see ya")
+    print("Nice Job!")
 
 
 if __name__ == '__main__':
