@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class PersonInterface(ABC):
-    """Please type in your information."""
+    print=  ("Please type in your information.")
     
     @abstractmethod
     def get_first_name(self) -> str:
@@ -38,3 +38,7 @@ class PersonInterface(ABC):
     def __str__(self) -> str:
         """Return string representation."""
         pass
+
+if __name__ == "__main__":
+    # Module-level guard must have a block; keep as a no-op placeholder.
+    pass

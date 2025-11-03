@@ -1,4 +1,3 @@
-import pytest
 from person import Person
 from person_interface import PersonInterface
 
