@@ -5,9 +5,9 @@ class Person(PersonInterface):
     """Implementation of PersonInterface."""
     
     def __init__(self):
-        self._first_name = None
-        self._last_name = None
-        self._age = None
+        self._first_name = input("Enter First name  """) #added this and kept everything the same
+        self._last_name = input ("Enter Last Name  """)
+        self._age = input("Enter Age """)
     
     def get_first_name(self) -> str:
         return self._first_name
@@ -15,7 +15,7 @@ class Person(PersonInterface):
     def set_first_name(self, first_name: str) -> None:
         self._first_name = first_name
     
-    def get_last_name(self) -> str:
+    def get_last_name(self) -> str: 
         return self._last_name
     
     def set_last_name(self, last_name: str) -> None:

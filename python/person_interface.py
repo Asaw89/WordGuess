@@ -2,8 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class PersonInterface(ABC):
-    print=  ("Please type in your information.")
-    
+    #No Change Needed 
     @abstractmethod
     def get_first_name(self) -> str:
         """Get the first name."""
